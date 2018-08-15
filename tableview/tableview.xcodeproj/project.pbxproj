@@ -15,6 +15,7 @@
 		C07B2F7B211FE78C003AA699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07B2F79211FE78C003AA699 /* LaunchScreen.storyboard */; };
 		C07B2F7E211FE78C003AA699 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B2F7D211FE78C003AA699 /* main.m */; };
 		C07B2F88211FE78C003AA699 /* tableviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B2F87211FE78C003AA699 /* tableviewTests.m */; };
+		C07B2FC721244B67003AA699 /* Province.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B2FC621244B67003AA699 /* Province.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		C07B2F83211FE78C003AA699 /* tableviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tableviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07B2F87211FE78C003AA699 /* tableviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableviewTests.m; sourceTree = "<group>"; };
 		C07B2F89211FE78C003AA699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07B2FC521244B67003AA699 /* Province.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Province.h; sourceTree = "<group>"; };
+		C07B2FC621244B67003AA699 /* Province.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Province.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				C07B2F7C211FE78C003AA699 /* Info.plist */,
 				C07B2F7D211FE78C003AA699 /* main.m */,
 				C07B2F74211FE78A003AA699 /* tableview.xcdatamodeld */,
+				C07B2FC521244B67003AA699 /* Province.h */,
+				C07B2FC621244B67003AA699 /* Province.m */,
 			);
 			path = tableview;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07B2FC721244B67003AA699 /* Province.m in Sources */,
 				C07B2F70211FE78A003AA699 /* ViewController.m in Sources */,
 				C07B2F6D211FE78A003AA699 /* AppDelegate.m in Sources */,
 				C07B2F7E211FE78C003AA699 /* main.m in Sources */,
