@@ -15,6 +15,9 @@
 		C07B2FE421247866003AA699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07B2FE221247866003AA699 /* LaunchScreen.storyboard */; };
 		C07B2FE721247866003AA699 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B2FE621247866003AA699 /* main.m */; };
 		C07B2FF121247866003AA699 /* plainTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B2FF021247866003AA699 /* plainTableTests.m */; };
+		C07B2FFE2125BF7F003AA699 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C07B2FFC2125BF7E003AA699 /* 01.jpg */; };
+		C07B2FFF2125BF7F003AA699 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C07B2FFD2125BF7F003AA699 /* 02.jpg */; };
+		C07B30022125CC59003AA699 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B30012125CC59003AA699 /* Product.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,10 @@
 		C07B2FEC21247866003AA699 /* plainTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = plainTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07B2FF021247866003AA699 /* plainTableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = plainTableTests.m; sourceTree = "<group>"; };
 		C07B2FF221247866003AA699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07B2FFC2125BF7E003AA699 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		C07B2FFD2125BF7F003AA699 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		C07B30002125CC59003AA699 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		C07B30012125CC59003AA699 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +90,7 @@
 		C07B2FD321247862003AA699 /* plainTable */ = {
 			isa = PBXGroup;
 			children = (
+				C07B2FFB2125BD52003AA699 /* SupportFiles */,
 				C07B2FD421247862003AA699 /* AppDelegate.h */,
 				C07B2FD521247862003AA699 /* AppDelegate.m */,
 				C07B2FD721247862003AA699 /* ViewController.h */,
@@ -93,6 +101,8 @@
 				C07B2FE521247866003AA699 /* Info.plist */,
 				C07B2FE621247866003AA699 /* main.m */,
 				C07B2FDD21247862003AA699 /* plainTable.xcdatamodeld */,
+				C07B30002125CC59003AA699 /* Product.h */,
+				C07B30012125CC59003AA699 /* Product.m */,
 			);
 			path = plainTable;
 			sourceTree = "<group>";
@@ -104,6 +114,15 @@
 				C07B2FF221247866003AA699 /* Info.plist */,
 			);
 			path = plainTableTests;
+			sourceTree = "<group>";
+		};
+		C07B2FFB2125BD52003AA699 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C07B2FFC2125BF7E003AA699 /* 01.jpg */,
+				C07B2FFD2125BF7F003AA699 /* 02.jpg */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,8 +205,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07B2FFF2125BF7F003AA699 /* 02.jpg in Resources */,
 				C07B2FE421247866003AA699 /* LaunchScreen.storyboard in Resources */,
 				C07B2FE121247866003AA699 /* Assets.xcassets in Resources */,
+				C07B2FFE2125BF7F003AA699 /* 01.jpg in Resources */,
 				C07B2FDC21247862003AA699 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C07B2FD921247862003AA699 /* ViewController.m in Sources */,
+				C07B30022125CC59003AA699 /* Product.m in Sources */,
 				C07B2FD621247862003AA699 /* AppDelegate.m in Sources */,
 				C07B2FE721247866003AA699 /* main.m in Sources */,
 				C07B2FDF21247862003AA699 /* plainTable.xcdatamodeld in Sources */,
@@ -365,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVDHDML9MV;
 				INFOPLIST_FILE = plainTable/Info.plist;
@@ -382,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVDHDML9MV;
 				INFOPLIST_FILE = plainTable/Info.plist;
