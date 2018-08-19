@@ -18,4 +18,7 @@
 
 + (id) productWithIcon:(NSString *) icon title:(NSString *) title desc:(NSString *) desc;
 
+- (id)initWithDict:(NSDictionary *) dict;
+
++ (id) productWithDict:(NSDictionary *)dict;
 @end

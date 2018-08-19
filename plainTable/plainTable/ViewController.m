@@ -13,6 +13,7 @@
 {
 //    NSArray *_productList;
     NSMutableArray *_productList;
+    NSMutableArray *_selectedProducts;
 }
 
 
@@ -43,10 +44,20 @@
 //    _productList = @[product1,product2,product3];
    
     
-    _productList = [NSMutableArray array];
     
+    _productList = [NSMutableArray array];
+    _selectedProducts = [NSMutableArray array];
    // [_productList addObject:product1];
     [_productList addObjectsFromArray:@[product1,product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12, product13, product14]];
+    
+    // 使用文件创建数据
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"product.plist" ofType:nil];
+    NSArray *array = [NSArray arrayWithContentsOfFile:path];
+    for (NSDictionary *dict in array) {
+        Product *product = [Product productWithDict:dict];
+        [_productList addObject:product];
+    }
+    
     
 }
 
@@ -62,7 +73,16 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+     // 先从缓存池中取cell
+    static NSString *ID = @"product_table";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil) {
+//        NSLog(@"创建cell");
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+   
+    
+//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
 
 //    cell.textLabel.text = @"产品";
 //    cell.detailTextLabel.text = @"产品详情";
@@ -74,47 +94,99 @@
     cell.detailTextLabel.text = product.desc;
     cell.imageView.image  = [UIImage imageNamed:product.icon];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    if ([_selectedProducts containsObject:product]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     
+    if (_selectedProducts.count ==0) {
+        _delBtn.enabled = NO;
+        _titleLabel.text = [NSString stringWithFormat:@"淘宝"];
+    } else {
+        _delBtn.enabled = YES;
+        _titleLabel.text = [NSString stringWithFormat:@"选中%ld行",_selectedProducts.count];
+    }
+//    NSLog(@"%p==>%ld", cell, indexPath.row);
     return cell;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    return 150;
+    return 100;
 }
 #pragma mark 代理方法
 #pragma mark 代表选中的每一行调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSLog(@"选中了第%d行", indexPath.row);
+    NSLog(@"选中了第%ld行", indexPath.row);
+//    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+//    selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
     Product *product = _productList[indexPath.row];
-    // 创建弹窗
-    UIAlertController *alert  = [UIAlertController alertControllerWithTitle:@"修改商品名称" message:product.title preferredStyle:UIAlertControllerStyleAlert];
-    // 文本框
-    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder =@"请输入新的商品名";
-        textField.accessibilityValue = product.title;
-        textField.text = product.title;
-    }];
-    // 添加按钮
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
-    UIAlertAction *sub = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        product.title = alert.textFields[0].text;
-        NSLog(@"%@",product.title);
-        [_tableView reloadData];
-    }];
-    // 加入按钮
-    [alert addAction:cancel];
-    [alert addAction:sub];
-    // 显示弹窗
-    [self presentViewController:alert animated:YES completion:nil];
+    if ([_selectedProducts containsObject:product]) {
+        [_selectedProducts removeObject:product];
+    } else {
+        [_selectedProducts addObject:product];
+    }
+    
+    
+    
+    NSLog(@"选中的行数-->%ld",_selectedProducts.count);
+    
+    //[tableView reloadData];
+    [_tableView reloadRowsAtIndexPaths:@[indexPath]  withRowAnimation:UITableViewRowAnimationLeft];
+    
+    if (NO) {
+        Product *product = _productList[indexPath.row];
+        // 创建弹窗
+        UIAlertController *alert  = [UIAlertController alertControllerWithTitle:@"修改商品名称" message:product.title preferredStyle:UIAlertControllerStyleAlert];
+        // 文本框
+        [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            textField.placeholder =@"请输入新的商品名";
+            textField.accessibilityValue = product.title;
+            textField.text = product.title;
+        }];
+        // 添加按钮
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *sub = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            product.title = alert.textFields[0].text;
+            NSLog(@"修改后的标题是==>%@",product.title);
+            //全部刷新
+           //  [_tableView reloadData];
+            // 局部刷新
+            [_tableView reloadRowsAtIndexPaths:@[indexPath]  withRowAnimation:UITableViewRowAnimationLeft];
+        }];
+        // 加入按钮
+        [alert addAction:cancel];
+        [alert addAction:sub];
+        // 显示弹窗
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
+
+#pragma mark 取消选中
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"deselect 取消选中行==> %ld", indexPath.row);
+}
+
+
+#pragma mark 删除数据
+
+- (void) delData:(id)sender
+{
+    NSLog(@"删除数据");
+    // 删除模型数据  数据源
+    [_productList removeObjectsInArray:_selectedProducts];
+    
+    // 刷新数据
+    [_tableView reloadData];
+    
+    [_selectedProducts removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 @end

@@ -20,4 +20,20 @@
     return product;
 }
 
+-(id)initWithDict:(NSDictionary *)dict
+{
+    if (self == [super init]) {
+        self.icon = dict[@"icon"];
+        self.title = dict[@"title"];
+        self.desc = dict[@"desc"];
+    }
+    
+    return self;
+}
+
++ (id)productWithDict:(NSDictionary *)dict
+{
+    return [[self alloc] initWithDict:dict];
+}
+
 @end

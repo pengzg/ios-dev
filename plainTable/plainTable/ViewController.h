@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)delData:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *delBtn;
 
 
 @end
