@@ -68,6 +68,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (_selectedProducts.count ==0) {
+        _delBtn.enabled = NO;
+        _titleLabel.text = [NSString stringWithFormat:@"淘宝"];
+    } else {
+        _delBtn.enabled = YES;
+        _titleLabel.text = [NSString stringWithFormat:@"选中%ld行",_selectedProducts.count];
+    }
     return _productList.count;
 }
 
@@ -100,13 +107,6 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    if (_selectedProducts.count ==0) {
-        _delBtn.enabled = NO;
-        _titleLabel.text = [NSString stringWithFormat:@"淘宝"];
-    } else {
-        _delBtn.enabled = YES;
-        _titleLabel.text = [NSString stringWithFormat:@"选中%ld行",_selectedProducts.count];
-    }
 //    NSLog(@"%p==>%ld", cell, indexPath.row);
     return cell;
 }
@@ -176,17 +176,42 @@
 - (void) delData:(id)sender
 {
     NSLog(@"删除数据");
+    BOOL result = !self.tableView.editing;
+    [self.tableView setEditing:result animated:YES];
     // 删除模型数据  数据源
-    [_productList removeObjectsInArray:_selectedProducts];
+//    [_productList removeObjectsInArray:_selectedProducts];
     
+    
+//    [_selectedProducts removeAllObjects];
     // 刷新数据
-    [_tableView reloadData];
-    
-    [_selectedProducts removeAllObjects];
+//    [_tableView reloadData];
+ 
+}
+#pragma mark 当用户提交一个编辑操作时自动 调用
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    Product *product = _productList[indexPath.row];
+//    if ([_selectedProducts containsObject:product]) {
+//        [_selectedProducts removeObject:product];
+//    } else {
+//        [_selectedProducts addObject:product];
+//    }
+    [_productList removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark 排序功能
+- (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    NSLog(@"源行==>%ld,目标行==> %ld", sourceIndexPath.row, destinationIndexPath.row);
+    
+    
+    Product *p = _productList[sourceIndexPath.row];
+    
+    [_productList removeObject:p];
+    
+    [_productList insertObject:p atIndex:destinationIndexPath.row];
 }
+
+
 @end
