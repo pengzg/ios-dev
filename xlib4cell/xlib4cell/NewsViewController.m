@@ -7,15 +7,27 @@
 //
 
 #import "NewsViewController.h"
+#import "NewsCell.h"
+#import "News.h"
 
 @interface NewsViewController ()
-
+{
+    NSMutableArray *_newsList;
+}
 @end
 
 @implementation NewsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _newsList = [NSMutableArray array];
+    
+    News *news1 = [News newsWithTitle:@"新闻1" author:@"作者1" commentNum:4 icon:@"01.jpg"];
+    News *news2 = [News newsWithTitle:@"新闻2" author:@"作者1" commentNum:4 icon:@"01.jpg"];
+    News *news3 = [News newsWithTitle:@"新闻3" author:@"作者1" commentNum:4 icon:@"01.jpg"];
+    News *news4 = [News newsWithTitle:@"新闻4" author:@"作者1" commentNum:4 icon:@"01.jpg"];
+    News *news5 = [News newsWithTitle:@"新闻5" author:@"作者1" commentNum:4 icon:@"01.jpg"];
+    [_newsList addObjectsFromArray:@[news1,news2,news3,news4,news5,news1,news2,news3,news4,news5]];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -33,66 +45,40 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return _newsList.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    // 2.从缓存池中取数据
+    NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:[NewsCell ID]];
+    if (cell == nil) {
+//        NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"NewsCell" owner:nil options:nil];
+        
+//        cell = objects[0];
+        cell = [NewsCell newsCell];
+        
+    }
+    cell.news = _newsList[indexPath.row];
+//    UILabel *titleLabel = (UILabel *)[cell viewWithTag:1];
+//    titleLabel.text = @"这是什么啊";
     
-    // Configure the cell...
+    
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
