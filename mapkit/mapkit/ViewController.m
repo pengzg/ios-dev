@@ -83,5 +83,17 @@
 - (IBAction)backMyLocation:(id)sender {
     // 设置中心点
     self.mapView.centerCoordinate = self.mapView.userLocation.location.coordinate;
+    
+    
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
+//    self.mapView.region = MKCoordinateRegionMake(self.mapView.userLocation.location.coordinate, span);
+    // 设置中心点 可以设置动画
+    [self.mapView setRegion:MKCoordinateRegionMake(self.mapView.userLocation.location.coordinate, span) animated:YES];
+}
+
+#pragma mark 地图显示区域发生改变后调用
+-(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    NSLog(@"latitudeDelta=>%f,longitudeDelta=>%f", self.mapView.region.span.latitudeDelta, self.mapView.region.span.longitudeDelta);
 }
 @end
