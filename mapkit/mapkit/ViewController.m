@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
+#import "MyAnnotationModel.h"
 
 @interface ViewController ()<MKMapViewDelegate>
 
@@ -29,6 +30,19 @@
     
     self.mapView.userTrackingMode = MKUserTrackingModeFollow;
     
+    MyAnnotationModel *annotation1 = [MyAnnotationModel new];
+    
+    annotation1.coordinate = CLLocationCoordinate2DMake(40, 116);
+    annotation1.title = @"中南海";
+    annotation1.subtitle = @"中央领导人活动地，中南坑";
+    
+    MyAnnotationModel *annotation2 = [MyAnnotationModel new];
+    
+    annotation2.coordinate = CLLocationCoordinate2DMake(40, 117);
+    annotation2.title = @"不知道";
+    annotation2.subtitle = @"中央领导人活动地，中南坑";
+    
+    [self.mapView addAnnotations:@[annotation1,annotation2]];
     self.mapView.delegate = self;
     // ios新增
     self.mapView.showsTraffic = YES;
@@ -99,5 +113,32 @@
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
     NSLog(@"latitudeDelta=>%f,longitudeDelta=>%f", self.mapView.region.span.latitudeDelta, self.mapView.region.span.longitudeDelta);
+}
+
+#pragma mark 点击添加大头针
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    // 得到 点击的点
+    CGPoint point = [[touches anyObject] locationInView:self.mapView];
+    // 把点转换成坐标
+    CLLocationCoordinate2D coordinate = [self.mapView convertPoint:point toCoordinateFromView:self.mapView];
+     MyAnnotationModel *annotation = [MyAnnotationModel new];
+    annotation.coordinate = coordinate;
+    
+    
+//    CLGeocoder *revCoder = [CLGeocoder new];
+//    CLLocation *revLoc = [[CLLocation alloc] initWithLatitude:point.x longitude:point.y];
+//
+//    // 得到 传入数据
+//    [revCoder reverseGeocodeLocation:revLoc
+//                   completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+//                       annotation.title = placemarks.lastObject.name;
+//                       annotation.subtitle = placemarks.lastObject.description;
+//                   }];
+//
+    
+    annotation.title = @"点击了";
+    annotation.subtitle = @"我要这地啊";
+    [self.mapView addAnnotation:annotation];
 }
 @end

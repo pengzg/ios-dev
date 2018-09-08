@@ -17,6 +17,7 @@
 		C0792AE1214374350089B342 /* mapkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0792AE0214374350089B342 /* mapkitTests.m */; };
 		C0792AED2143744E0089B342 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0792AEC2143744D0089B342 /* CoreLocation.framework */; };
 		C0792AEF2143773D0089B342 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0792AEE2143773D0089B342 /* MapKit.framework */; };
+		C0792AF22143D5960089B342 /* MyAnnotationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0792AF12143D5960089B342 /* MyAnnotationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		C0792AE2214374350089B342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0792AEC2143744D0089B342 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C0792AEE2143773D0089B342 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C0792AF02143D5960089B342 /* MyAnnotationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAnnotationModel.h; sourceTree = "<group>"; };
+		C0792AF12143D5960089B342 /* MyAnnotationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAnnotationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				C0792AD5214374350089B342 /* Info.plist */,
 				C0792AD6214374350089B342 /* main.m */,
 				C0792ACD214374330089B342 /* mapkit.xcdatamodeld */,
+				C0792AF02143D5960089B342 /* MyAnnotationModel.h */,
+				C0792AF12143D5960089B342 /* MyAnnotationModel.m */,
 			);
 			path = mapkit;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			files = (
 				C0792AC9214374330089B342 /* ViewController.m in Sources */,
 				C0792AC6214374330089B342 /* AppDelegate.m in Sources */,
+				C0792AF22143D5960089B342 /* MyAnnotationModel.m in Sources */,
 				C0792AD7214374350089B342 /* main.m in Sources */,
 				C0792ACF214374330089B342 /* mapkit.xcdatamodeld in Sources */,
 			);
