@@ -30,6 +30,10 @@
     self.mapView.userTrackingMode = MKUserTrackingModeFollow;
     
     self.mapView.delegate = self;
+    // ios新增
+    self.mapView.showsTraffic = YES;
+    self.mapView.showsCompass = YES;
+    self.mapView.showsScale = YES;
     
 }
 
