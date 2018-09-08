@@ -50,9 +50,11 @@
         [self.contentView addSubview:_vip];
         //时间
         _time  = [[UILabel alloc] init];
+        _time.font = [UIFont systemFontOfSize:14];
         [self.contentView addSubview:_time];
         //来源
         _source  = [[UILabel alloc] init];
+        _source.font = [UIFont systemFontOfSize:14];
         [self.contentView addSubview:_source];
         //微博正文
         _content  = [[UILabel alloc] init];
@@ -118,11 +120,31 @@
     CGSize sourceSize = [_weibo.source sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18.0f],NSStrokeColorAttributeName: [UIColor redColor], NSForegroundColorAttributeName:[UIColor redColor]}];
     _source.frame = CGRectMake(sourceX, sourceY, sourceSize.width, sourceSize.height);
     
+    
+//    NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:14]};
+    // NSString class method: boundingRectWithSize:options:attributes:context is
+    // available only on ios7.0 sdk.
+//    CGRect rect = [textToMeasure boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
     // content
     CGFloat contentX = iconX;
     CGFloat contentY = MAX(CGRectGetMaxY(_icon.frame), CGRectGetMaxY(_time.frame)) + kBorderWh;
-    CGSize contentSize = [_weibo.content sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18.0f],NSStrokeColorAttributeName: [UIColor redColor], NSForegroundColorAttributeName:[UIColor redColor]}];
-    _content.frame = CGRectMake(contentX, contentY, contentSize.width, contentSize.height);
+//    CGSize contentSize = [_weibo.content sizeWithAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18.0f],NSStrokeColorAttributeName: [UIColor redColor], NSForegroundColorAttributeName:[UIColor redColor]}];
+    CGFloat contentW = self.frame.size.width - 2*kBorderWh;
+    CGRect rect = [_weibo.content boundingRectWithSize:CGSizeMake(contentW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue" size:14]} context:nil];
+    _content.frame = CGRectMake(contentX, contentY, contentW, rect.size.height);
+    
+    CGFloat cellHeight = 0;
+    // img
+    if (weibo.img) {
+        CGFloat imgX = iconX;
+        CGFloat imgY = CGRectGetMaxY(_content.frame);
+        NSLog(@"imgY====%f", imgY);
+        _img.image = [UIImage imageNamed:weibo.img];
+        _img.frame = CGRectMake(imgX, imgY, 200, 200);
+        cellHeight = CGRectGetMaxY(_img.frame);
+    } else {
+        cellHeight = CGRectGetMaxY(_content.frame);
+    }
 }
 
 @end

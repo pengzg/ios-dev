@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Weibo;
+@class WeiboFrame;
 
 @interface WeiboCell : UITableViewCell
 
-@property(nonatomic, strong) Weibo *weibo;
+@property(nonatomic, strong) WeiboFrame *weiboFrame;
 
 @end

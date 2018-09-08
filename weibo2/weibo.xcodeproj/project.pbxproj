@@ -21,6 +21,7 @@
 		C07B309B213276EE003AA699 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C07B3098213276EE003AA699 /* 03.jpg */; };
 		C07B309C213276EE003AA699 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C07B3099213276EE003AA699 /* 02.jpg */; };
 		C07B309E21327E4A003AA699 /* vip.png in Resources */ = {isa = PBXBuildFile; fileRef = C07B309D21327E4A003AA699 /* vip.png */; };
+		C09624F62135777700CCBF6B /* WeiboFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C09624F52135777700CCBF6B /* WeiboFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		C07B3098213276EE003AA699 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
 		C07B3099213276EE003AA699 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
 		C07B309D21327E4A003AA699 /* vip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vip.png; sourceTree = "<group>"; };
+		C09624F42135777600CCBF6B /* WeiboFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiboFrame.h; sourceTree = "<group>"; };
+		C09624F52135777700CCBF6B /* WeiboFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				C07B308E21324F6F003AA699 /* Weibo.m */,
 				C07B309321324FBB003AA699 /* WeiboCell.h */,
 				C07B309421324FBB003AA699 /* WeiboCell.m */,
+				C09624F42135777600CCBF6B /* WeiboFrame.h */,
+				C09624F52135777700CCBF6B /* WeiboFrame.m */,
 			);
 			path = weibo;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			files = (
 				C07B30652131674A003AA699 /* weibo.xcdatamodeld in Sources */,
 				C07B308F21324F6F003AA699 /* Weibo.m in Sources */,
+				C09624F62135777700CCBF6B /* WeiboFrame.m in Sources */,
 				C07B309521324FBB003AA699 /* WeiboCell.m in Sources */,
 				C07B305F2131674A003AA699 /* ViewController.m in Sources */,
 				C07B306D2131674E003AA699 /* main.m in Sources */,
