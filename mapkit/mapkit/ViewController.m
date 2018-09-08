@@ -115,6 +115,49 @@
     NSLog(@"latitudeDelta=>%f,longitudeDelta=>%f", self.mapView.region.span.latitudeDelta, self.mapView.region.span.longitudeDelta);
 }
 
+#pragma mark 返回大头针view
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+    NSString *ID = @"annoView";
+//    MKPinAnnotationView *annoView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:ID];
+//    if (annoView == nil) {
+//        annoView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:ID];
+//        annoView.pinTintColor = [UIColor greenColor];
+//
+//    }
+//    annoView.animatesDrop = YES;
+    MKAnnotationView *annoView = [mapView dequeueReusableAnnotationViewWithIdentifier:ID];
+    if (annoView == nil) {
+        annoView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:ID];
+        
+//        annoView.image = [UIImage imageNamed:@"0.jpg"];
+        
+    }
+    MyAnnotationModel *an = annotation;
+    annoView.image = [UIImage imageNamed:an.icon];
+    annoView.bounds = CGRectMake(0, 0, 44, 44);;
+    return annoView;
+}
+
+#pragma mark 添加之前调用
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views
+{
+    if (![views.lastObject.annotation isKindOfClass:[MKUserLocation class]]) {
+        CGRect endFrame = views.lastObject.frame;
+        
+        views.lastObject.frame = CGRectMake(endFrame.origin.x, 0, endFrame.size.width, endFrame.size.height);
+        
+        [UIView animateWithDuration:1 animations:^{
+            views.lastObject.frame = endFrame;
+        }];
+
+    }
+}
+
 #pragma mark 点击添加大头针
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
@@ -139,6 +182,7 @@
     
     annotation.title = @"点击了";
     annotation.subtitle = @"我要这地啊";
+    annotation.icon = @"6.jpg";
     [self.mapView addAnnotation:annotation];
 }
 @end

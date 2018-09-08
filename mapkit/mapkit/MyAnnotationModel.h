@@ -14,5 +14,6 @@
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy, nullable) NSString *title;
 @property (nonatomic, copy, nullable) NSString *subtitle;
+@property (nonatomic, copy, nullable) NSString *icon;
 
 @end
