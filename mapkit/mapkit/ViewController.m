@@ -135,11 +135,16 @@
         annoView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:ID];
         
 //        annoView.image = [UIImage imageNamed:@"0.jpg"];
+        annoView.canShowCallout = YES;
+        annoView.leftCalloutAccessoryView = [UISwitch new];
+        annoView.rightCalloutAccessoryView = [UISwitch new];
+        annoView.detailCalloutAccessoryView = [UISwitch new];
         
     }
     MyAnnotationModel *an = annotation;
     annoView.image = [UIImage imageNamed:an.icon];
-    annoView.bounds = CGRectMake(0, 0, 44, 44);;
+    annoView.bounds = CGRectMake(0, 0, 44, 44);
+    
     return annoView;
 }
 
