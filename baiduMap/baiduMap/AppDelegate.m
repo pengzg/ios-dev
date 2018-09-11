@@ -15,9 +15,7 @@
 #import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
 
 @interface AppDelegate ()
-{
-    BMKMapManager *mapManager;
-}
+
 @end
 
 @implementation AppDelegate
@@ -27,7 +25,7 @@
     // Override point for customization after application launch.
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
-    BOOL ret = [_mapManager start:@"8eRsTbaNPdpIGGFLFcknMICVpmSdbBZK"  generalDelegate:nil];
+    BOOL ret = [_mapManager start:@"mXMNsIqZYIUsknDOWH8pXtS7I8vP8Mn9"  generalDelegate:nil];
     if (!ret) {
         NSLog(@"manager start failed!");
     }

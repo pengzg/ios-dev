@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C002975B2146A98800EBB5D9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C002975A2146A98800EBB5D9 /* Social.framework */; };
 		C01C7CE92145376E00E9757B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C7CE82145376E00E9757B /* AppDelegate.m */; };
 		C01C7CEC2145376E00E9757B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01C7CEB2145376E00E9757B /* ViewController.m */; };
 		C01C7CEF2145376E00E9757B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01C7CED2145376E00E9757B /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C002975A2146A98800EBB5D9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C01C7CE42145376E00E9757B /* baiduMap2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baiduMap2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01C7CE72145376E00E9757B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C01C7CE82145376E00E9757B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C002975B2146A98800EBB5D9 /* Social.framework in Frameworks */,
 				C01C7D3B2145542A00E9757B /* CoreData.framework in Frameworks */,
 				C01C7D372145396600E9757B /* libc++.tbd in Frameworks */,
 				C01C7D352145395700E9757B /* CoreTelephony.framework in Frameworks */,
@@ -172,6 +175,7 @@
 		C01C7D0E214537C700E9757B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C002975A2146A98800EBB5D9 /* Social.framework */,
 				C01C7D3A2145542A00E9757B /* CoreData.framework */,
 				C01C7D362145396600E9757B /* libc++.tbd */,
 				C01C7D342145395600E9757B /* CoreTelephony.framework */,
