@@ -36,9 +36,38 @@
     
 //    NSURLSession send
 //    [self asyncBlock];
-    [self asyncDelegate];
+//    [self asyncDelegate];
+    [self sync];
     NSLog(@"登录吧");
 }
+
+#pragma mark 同步请求
+- (void) sync
+{
+    // 创建nsurl对象
+    NSURL *url  = [NSURL URLWithString:@"https://yxtest.sqkx.net/mobile/work/loginControl/login.action"];
+    
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"POST";
+    
+    //设置请求体
+    NSString *param=[NSString stringWithFormat:@"logincode=%@&pwd=%@",_accountTF.text,_pwdTF.text];
+    //把拼接后的字符串转换为data，设置请求体
+    request.HTTPBody=[param dataUsingEncoding:NSUTF8StringEncoding];
+    
+//    request.HTTPMethod
+    NSURLResponse * response = nil;
+    NSError *error = nil;
+    NSData *data =  [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if (error == nil) {
+        NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"str==>%@", str);
+    }
+    
+}
+
+
 #pragma mark 异步请求  代理方法
 - (void)asyncDelegate
 {
