@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0B381FA215D240A00FD2E88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B381F9215D240A00FD2E88 /* CoreGraphics.framework */; };
+		C0B381FD215D251200FD2E88 /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B381FC215D251200FD2E88 /* MD5.m */; };
 		C0EDD3AF2157361F00277476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD3AE2157361F00277476 /* AppDelegate.m */; };
 		C0EDD3B22157361F00277476 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD3B12157361F00277476 /* ViewController.m */; };
 		C0EDD3B52157361F00277476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0EDD3B32157361F00277476 /* Main.storyboard */; };
@@ -28,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0B381F9215D240A00FD2E88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C0B381FB215D251200FD2E88 /* MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
+		C0B381FC215D251200FD2E88 /* MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MD5.m; sourceTree = "<group>"; };
 		C0EDD3AA2157361F00277476 /* httpRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = httpRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EDD3AD2157361F00277476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C0EDD3AE2157361F00277476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B381FA215D240A00FD2E88 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +68,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0B381F8215D240A00FD2E88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0B381F9215D240A00FD2E88 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C0EDD3A12157361F00277476 = {
 			isa = PBXGroup;
 			children = (
 				C0EDD3AC2157361F00277476 /* httpRequest */,
 				C0EDD3C82157362200277476 /* httpRequestTests */,
 				C0EDD3AB2157361F00277476 /* Products */,
+				C0B381F8215D240A00FD2E88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +108,8 @@
 				C0EDD3BE2157362200277476 /* Info.plist */,
 				C0EDD3BF2157362200277476 /* main.m */,
 				C0EDD3B62157361F00277476 /* httpRequest.xcdatamodeld */,
+				C0B381FB215D251200FD2E88 /* MD5.h */,
+				C0B381FC215D251200FD2E88 /* MD5.m */,
 			);
 			path = httpRequest;
 			sourceTree = "<group>";
@@ -208,6 +225,7 @@
 			files = (
 				C0EDD3B22157361F00277476 /* ViewController.m in Sources */,
 				C0EDD3B82157361F00277476 /* httpRequest.xcdatamodeld in Sources */,
+				C0B381FD215D251200FD2E88 /* MD5.m in Sources */,
 				C0EDD3C02157362200277476 /* main.m in Sources */,
 				C0EDD3AF2157361F00277476 /* AppDelegate.m in Sources */,
 			);

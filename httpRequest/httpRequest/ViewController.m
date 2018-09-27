@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MD5.h"
+
 
 @interface ViewController ()<NSURLConnectionDataDelegate>
 
@@ -52,7 +54,8 @@
     request.HTTPMethod = @"POST";
     
     //设置请求体
-    NSString *param=[NSString stringWithFormat:@"logincode=%@&pwd=%@",_accountTF.text,_pwdTF.text];
+
+    NSString *param=[NSString stringWithFormat:@"logincode=%@&pwd=%@",_accountTF.text,[MD5 md5:_pwdTF.text]];
     //把拼接后的字符串转换为data，设置请求体
     request.HTTPBody=[param dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -76,7 +79,7 @@
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    [NSURLConnection connectionWithRequest:request delegate:self ];
+    [NSURLConnection connectionWithRequest:request delegate:self];
     
 }
 #pragma  mark 协议方法 连接
@@ -130,6 +133,9 @@
         NSLog(@"thread=>%@", [NSThread currentThread]);
     }];
 }
+
+
+
 
 
 @end
