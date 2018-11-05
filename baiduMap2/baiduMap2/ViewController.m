@@ -30,6 +30,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     _mapView = [[BMKMapView alloc] init];
     [_mapView setMapType:BMKMapTypeSatellite];
+    [_mapView setShowsUserLocation:YES];
      self.view = _mapView;
     
 

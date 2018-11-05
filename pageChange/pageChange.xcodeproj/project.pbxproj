@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02C5D2A2155FDEC00761BB4 /* SecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = C02C5D292155FDEC00761BB4 /* SecondController.m */; };
 		C08057A62155FC9B00CCE3B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C08057A52155FC9B00CCE3B6 /* AppDelegate.m */; };
 		C08057A92155FC9B00CCE3B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C08057A82155FC9B00CCE3B6 /* ViewController.m */; };
 		C08057AC2155FC9B00CCE3B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08057AA2155FC9B00CCE3B6 /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C02C5D282155FDEC00761BB4 /* SecondController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondController.h; sourceTree = "<group>"; };
+		C02C5D292155FDEC00761BB4 /* SecondController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondController.m; sourceTree = "<group>"; };
 		C08057A12155FC9B00CCE3B6 /* pageChange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pageChange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08057A42155FC9B00CCE3B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C08057A52155FC9B00CCE3B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				C08057B52155FCA200CCE3B6 /* Info.plist */,
 				C08057B62155FCA200CCE3B6 /* main.m */,
 				C08057AD2155FC9B00CCE3B6 /* pageChange.xcdatamodeld */,
+				C02C5D282155FDEC00761BB4 /* SecondController.h */,
+				C02C5D292155FDEC00761BB4 /* SecondController.m */,
 			);
 			path = pageChange;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			files = (
 				C08057A92155FC9B00CCE3B6 /* ViewController.m in Sources */,
 				C08057AF2155FC9B00CCE3B6 /* pageChange.xcdatamodeld in Sources */,
+				C02C5D2A2155FDEC00761BB4 /* SecondController.m in Sources */,
 				C08057B72155FCA200CCE3B6 /* main.m in Sources */,
 				C08057A62155FC9B00CCE3B6 /* AppDelegate.m in Sources */,
 			);

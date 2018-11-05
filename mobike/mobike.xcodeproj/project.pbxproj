@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0EDD37C215725FA00277476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD37B215725FA00277476 /* AppDelegate.m */; };
+		C0EDD37F215725FA00277476 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD37E215725FA00277476 /* ViewController.m */; };
+		C0EDD382215725FA00277476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0EDD380215725FA00277476 /* Main.storyboard */; };
+		C0EDD385215725FA00277476 /* mobike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD383215725FA00277476 /* mobike.xcdatamodeld */; };
+		C0EDD387215725FB00277476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0EDD386215725FB00277476 /* Assets.xcassets */; };
+		C0EDD38A215725FB00277476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0EDD388215725FB00277476 /* LaunchScreen.storyboard */; };
+		C0EDD38D215725FB00277476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD38C215725FB00277476 /* main.m */; };
+		C0EDD397215725FB00277476 /* mobikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD396215725FB00277476 /* mobikeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0EDD393215725FB00277476 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0EDD36F215725FA00277476 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0EDD376215725FA00277476;
+			remoteInfo = mobike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C0EDD377215725FA00277476 /* mobike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mobike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EDD37A215725FA00277476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C0EDD37B215725FA00277476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C0EDD37D215725FA00277476 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C0EDD37E215725FA00277476 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C0EDD381215725FA00277476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0EDD384215725FA00277476 /* mobike.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mobike.xcdatamodel; sourceTree = "<group>"; };
+		C0EDD386215725FB00277476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0EDD389215725FB00277476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C0EDD38B215725FB00277476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0EDD38C215725FB00277476 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C0EDD392215725FB00277476 /* mobikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EDD396215725FB00277476 /* mobikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mobikeTests.m; sourceTree = "<group>"; };
+		C0EDD398215725FB00277476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0EDD374215725FA00277476 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0EDD38F215725FB00277476 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0EDD36E215725FA00277476 = {
+			isa = PBXGroup;
+			children = (
+				C0EDD379215725FA00277476 /* mobike */,
+				C0EDD395215725FB00277476 /* mobikeTests */,
+				C0EDD378215725FA00277476 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0EDD378215725FA00277476 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0EDD377215725FA00277476 /* mobike.app */,
+				C0EDD392215725FB00277476 /* mobikeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0EDD379215725FA00277476 /* mobike */ = {
+			isa = PBXGroup;
+			children = (
+				C0EDD37A215725FA00277476 /* AppDelegate.h */,
+				C0EDD37B215725FA00277476 /* AppDelegate.m */,
+				C0EDD37D215725FA00277476 /* ViewController.h */,
+				C0EDD37E215725FA00277476 /* ViewController.m */,
+				C0EDD380215725FA00277476 /* Main.storyboard */,
+				C0EDD386215725FB00277476 /* Assets.xcassets */,
+				C0EDD388215725FB00277476 /* LaunchScreen.storyboard */,
+				C0EDD38B215725FB00277476 /* Info.plist */,
+				C0EDD38C215725FB00277476 /* main.m */,
+				C0EDD383215725FA00277476 /* mobike.xcdatamodeld */,
+			);
+			path = mobike;
+			sourceTree = "<group>";
+		};
+		C0EDD395215725FB00277476 /* mobikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0EDD396215725FB00277476 /* mobikeTests.m */,
+				C0EDD398215725FB00277476 /* Info.plist */,
+			);
+			path = mobikeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0EDD376215725FA00277476 /* mobike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0EDD39B215725FB00277476 /* Build configuration list for PBXNativeTarget "mobike" */;
+			buildPhases = (
+				C0EDD373215725FA00277476 /* Sources */,
+				C0EDD374215725FA00277476 /* Frameworks */,
+				C0EDD375215725FA00277476 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mobike;
+			productName = mobike;
+			productReference = C0EDD377215725FA00277476 /* mobike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C0EDD391215725FB00277476 /* mobikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0EDD39E215725FB00277476 /* Build configuration list for PBXNativeTarget "mobikeTests" */;
+			buildPhases = (
+				C0EDD38E215725FB00277476 /* Sources */,
+				C0EDD38F215725FB00277476 /* Frameworks */,
+				C0EDD390215725FB00277476 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0EDD394215725FB00277476 /* PBXTargetDependency */,
+			);
+			name = mobikeTests;
+			productName = mobikeTests;
+			productReference = C0EDD392215725FB00277476 /* mobikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0EDD36F215725FA00277476 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = pengzg;
+				TargetAttributes = {
+					C0EDD376215725FA00277476 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					C0EDD391215725FB00277476 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = C0EDD376215725FA00277476;
+					};
+				};
+			};
+			buildConfigurationList = C0EDD372215725FA00277476 /* Build configuration list for PBXProject "mobike" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0EDD36E215725FA00277476;
+			productRefGroup = C0EDD378215725FA00277476 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0EDD376215725FA00277476 /* mobike */,
+				C0EDD391215725FB00277476 /* mobikeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0EDD375215725FA00277476 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EDD38A215725FB00277476 /* LaunchScreen.storyboard in Resources */,
+				C0EDD387215725FB00277476 /* Assets.xcassets in Resources */,
+				C0EDD382215725FA00277476 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0EDD390215725FB00277476 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0EDD373215725FA00277476 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EDD37F215725FA00277476 /* ViewController.m in Sources */,
+				C0EDD37C215725FA00277476 /* AppDelegate.m in Sources */,
+				C0EDD38D215725FB00277476 /* main.m in Sources */,
+				C0EDD385215725FA00277476 /* mobike.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0EDD38E215725FB00277476 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EDD397215725FB00277476 /* mobikeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0EDD394215725FB00277476 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0EDD376215725FA00277476 /* mobike */;
+			targetProxy = C0EDD393215725FB00277476 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C0EDD380215725FA00277476 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0EDD381215725FA00277476 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C0EDD388215725FB00277476 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0EDD389215725FB00277476 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0EDD399215725FB00277476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C0EDD39A215725FB00277476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0EDD39C215725FB00277476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVDHDML9MV;
+				INFOPLIST_FILE = mobike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pengz.com.mobike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0EDD39D215725FB00277476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVDHDML9MV;
+				INFOPLIST_FILE = mobike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pengz.com.mobike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C0EDD39F215725FB00277476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVDHDML9MV;
+				INFOPLIST_FILE = mobikeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pengz.com.mobikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobike.app/mobike";
+			};
+			name = Debug;
+		};
+		C0EDD3A0215725FB00277476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVDHDML9MV;
+				INFOPLIST_FILE = mobikeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pengz.com.mobikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobike.app/mobike";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0EDD372215725FA00277476 /* Build configuration list for PBXProject "mobike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EDD399215725FB00277476 /* Debug */,
+				C0EDD39A215725FB00277476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0EDD39B215725FB00277476 /* Build configuration list for PBXNativeTarget "mobike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EDD39C215725FB00277476 /* Debug */,
+				C0EDD39D215725FB00277476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0EDD39E215725FB00277476 /* Build configuration list for PBXNativeTarget "mobikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EDD39F215725FB00277476 /* Debug */,
+				C0EDD3A0215725FB00277476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C0EDD383215725FA00277476 /* mobike.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C0EDD384215725FA00277476 /* mobike.xcdatamodel */,
+			);
+			currentVersion = C0EDD384215725FA00277476 /* mobike.xcdatamodel */;
+			path = mobike.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C0EDD36F215725FA00277476 /* Project object */;
+}
