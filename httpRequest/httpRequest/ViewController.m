@@ -65,6 +65,9 @@
     NSData *data =  [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     if (error == nil) {
         NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        NSLog(@"%@", dict[@"desc"]);
         NSLog(@"str==>%@", str);
     }
     

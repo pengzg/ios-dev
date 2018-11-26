@@ -90,7 +90,7 @@
             NSLog(@"这是网络图片");
             NSURL *imgUrl = [NSURL URLWithString:weibo.img];
             NSData *imgData = [NSData dataWithContentsOfURL:imgUrl];
-            NSLog(@"%@", imgData);
+           // NSLog(@"%@", imgData);
             _img.image = [UIImage imageWithData:imgData];
         } else {
             _img.image = [UIImage imageNamed:weibo.img];
