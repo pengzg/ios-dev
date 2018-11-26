@@ -28,7 +28,7 @@
     Weibo *weibo1 = [Weibo weiboWithIcon:@"01.jpg" name:@"彭" time:@"2018-02-02 23:32:33" source:@"来自iphone客户端" content:content img:@"03.jpg" vip:nil];
     Weibo *weibo2 = [Weibo weiboWithIcon:@"02.jpg" name:@"彭宗" time:@"2018-02-02 23:32:33" source:@"来自iphone客户端" content:@"这是测试" img:@"02.jpg" vip:@"02.jpg"];
     Weibo *weibo3 = [Weibo weiboWithIcon:@"03.jpg" name:@"彭宗阁" time:@"2018-02-02 23:32:33" source:@"来自iphone客户端" content:@"这是测试sfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" img:@"01.jpg" vip:@"02.jpg"];
-    Weibo *weibo4 = [Weibo weiboWithIcon:@"02.jpg" name:@"彭宗阁彭" time:@"2018-02-02 23:32:33" source:@"来自iphone客户端" content:@"这是测试" img:@"http://imgtest.sqkx.net/static/upload/image/100001/common/2018/11/21/1542779170660053866.jpg" vip:@"02.jpg"];
+    Weibo *weibo4 = [Weibo weiboWithIcon:@"02.jpg" name:@"彭宗阁彭" time:@"2018-02-02 23:32:33" source:@"来自iphone客户端" content:@"这是测试" img:@"https://ds.sqkx.net/img/sugg-img.jpg" vip:@"02.jpg"];
     
     [_weiboList addObjectsFromArray:@[weibo1,weibo2, weibo3, weibo4]];
     

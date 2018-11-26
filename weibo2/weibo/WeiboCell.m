@@ -85,8 +85,19 @@
     //微博正文
     _content.text = weibo.content;
     //图片
-    _img.image = [UIImage imageNamed:weibo.img];
-    NSLog(@"名称 %@", weibo.name);
+    if (weibo.img) {
+        if ([weibo.img rangeOfString:@"http"].location != NSNotFound) {
+            NSLog(@"这是网络图片");
+            NSURL *imgUrl = [NSURL URLWithString:weibo.img];
+            NSData *imgData = [NSData dataWithContentsOfURL:imgUrl];
+            NSLog(@"%@", imgData);
+            _img.image = [UIImage imageWithData:imgData];
+        } else {
+            _img.image = [UIImage imageNamed:weibo.img];
+            NSLog(@"名称 %@", weibo.name);
+        }
+    }
+    
     // 设置frame
     
     _icon.frame = _weiboFrame.iconF;
