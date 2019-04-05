@@ -66,6 +66,8 @@
     return 1;
 }
 
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (_selectedProducts.count ==0) {

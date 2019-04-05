@@ -6,12 +6,11 @@
 //  Copyright © 2018 pengzg. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@class GoodsFrame;
 
-NS_ASSUME_NONNULL_BEGIN
 
-@interface GoodsCell : NSObject
+@interface GoodsCell : UITableViewCell
 
 @end
 
-NS_ASSUME_NONNULL_END
