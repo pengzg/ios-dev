@@ -64,9 +64,14 @@
     isSearch = NO;
 }
 
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+   [self filterBySubstring:searchBar.text];
+}
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self filterBySubstring:searchBar.text];
+   
     [self resignFirstResponder];
 }
 
