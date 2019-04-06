@@ -9,11 +9,12 @@
 #import "ViewController.h"
 #import "Product.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 {
 //    NSArray *_productList;
     NSMutableArray *_productList;
     NSMutableArray *_selectedProducts;
+    BOOL isSearch;
 }
 
 
@@ -25,6 +26,7 @@
     
     _tableView.dataSource = self;
     _tableView.scrollEnabled = YES;
+    _searchBar.delegate = self;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     Product *product1 = [Product  productWithIcon:@"01.jpg" title:@"商品1" desc:@"描述1"];
@@ -215,5 +217,21 @@
     [_productList insertObject:p atIndex:destinationIndexPath.row];
 }
 
+#pragma mark 当搜索框内的文字改变时触发
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    NSLog(@"%@", searchText);
+}
+#pragma mark 当停止编辑搜索时触发
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    NSLog(@"%@", searchBar.text);
+}
 
+#pragma mark 当搜索按钮被点击
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSLog(@"搜索按钮被点击%@", searchBar.text);
+//    [_productList removeAllObjects];
+}
 @end

@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *delBtn;
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
