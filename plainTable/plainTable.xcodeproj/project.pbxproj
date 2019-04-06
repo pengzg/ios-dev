@@ -19,6 +19,7 @@
 		C07B2FFF2125BF7F003AA699 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C07B2FFD2125BF7F003AA699 /* 02.jpg */; };
 		C07B30022125CC59003AA699 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B30012125CC59003AA699 /* Product.m */; };
 		C07B300421286F06003AA699 /* product.plist in Resources */ = {isa = PBXBuildFile; fileRef = C07B300321286F06003AA699 /* product.plist */; };
+		C0A5DA2E225893F000E17ED4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A5DA2D225893F000E17ED4 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		C07B30002125CC59003AA699 /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		C07B30012125CC59003AA699 /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		C07B300321286F06003AA699 /* product.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = product.plist; sourceTree = "<group>"; };
+		C0A5DA2C225893F000E17ED4 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		C0A5DA2D225893F000E17ED4 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				C07B30002125CC59003AA699 /* Product.h */,
 				C07B30012125CC59003AA699 /* Product.m */,
 				C07B300321286F06003AA699 /* product.plist */,
+				C0A5DA2C225893F000E17ED4 /* DetailViewController.h */,
+				C0A5DA2D225893F000E17ED4 /* DetailViewController.m */,
 			);
 			path = plainTable;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				C07B2FD621247862003AA699 /* AppDelegate.m in Sources */,
 				C07B2FE721247866003AA699 /* main.m in Sources */,
 				C07B2FDF21247862003AA699 /* plainTable.xcdatamodeld in Sources */,
+				C0A5DA2E225893F000E17ED4 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
