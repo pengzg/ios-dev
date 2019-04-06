@@ -15,6 +15,7 @@
     NSMutableArray *_productList;
     NSMutableArray *_selectedProducts;
     BOOL isSearch;
+    NSMutableArray *_searchList;
 }
 
 
@@ -78,6 +79,9 @@
     } else {
         _delBtn.enabled = YES;
         _titleLabel.text = [NSString stringWithFormat:@"选中%ld行",_selectedProducts.count];
+    }
+    if (isSearch) {
+        _productList = _searchList;
     }
     return _productList.count;
 }
@@ -232,6 +236,17 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     NSLog(@"搜索按钮被点击%@", searchBar.text);
-//    [_productList removeAllObjects];
+    [self filterBySubstring:searchBar.text];
+    [_productList removeAllObjects];
+    [_tableView reloadData];
 }
+
+-(void)filterBySubstring:(NSString *) str
+{
+    isSearch = YES;
+    NSPredicate * pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c]%@", str];
+    _searchList = [_productList filteredArrayUsingPredicate:pred];
+  //  [_tableView reloadData];
+}
+
 @end
