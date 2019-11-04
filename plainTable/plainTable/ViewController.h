@@ -18,5 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
+- (IBAction)editData:(id)sender;
+
 @end
 

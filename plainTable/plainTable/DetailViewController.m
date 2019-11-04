@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"跳进来了");
     // Do any additional setup after loading the view.
 }
 

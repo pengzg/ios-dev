@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Product.h"
+#import "DetailViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 {
@@ -249,4 +250,20 @@
   //  [_tableView reloadData];
 }
 
+- (IBAction)edit:(id)sender {
+    if (!_selectedProducts) {
+        NSLog(@"请选择要编辑的商品");
+    }
+    
+}
+
+- (IBAction)editData:(id)sender {
+    NSLog(@"编辑数据");
+    NSLog(@"已经选择%ld条", _selectedProducts.count);
+    if (_selectedProducts.count>0) {
+        DetailViewController *detailControl = [DetailViewController new];
+        detailControl.productName = _selectedProducts[0];
+        [self presentViewController:detailControl animated:YES completion:nil];
+    }
+}
 @end
