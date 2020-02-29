@@ -68,7 +68,7 @@
         MKPlacemark *sourceMkpm = [[MKPlacemark alloc] initWithCoordinate:self.mapView.userLocation.location.coordinate];
         MKMapItem *source = [[MKMapItem alloc] initWithPlacemark:sourceMkpm];
         
-        MKPlacemark *disMkpm = [[MKPlacemark alloc] initWithPlacemark:placemarks.lastObject];
+        MKPlacemark *disMkpm = [[MKPlacemark alloc] initWithPlacemark:placemarks.firstObject];
         MKMapItem *dis = [[MKMapItem alloc] initWithPlacemark:disMkpm];
         
         
