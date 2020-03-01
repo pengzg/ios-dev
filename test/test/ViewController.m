@@ -16,15 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"考反应扑克游戏" message:@"当黑桃出现时以最快速度按下扑克"  preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    [alertView addAction:cancel];
-
-    
-//    [self presentingViewController:alertView];
    
+    
 }
 
 
+- (IBAction)showTip:(UIButton *)sender {
+    
+        UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"考反应扑克游戏" message:@"当黑桃出现时以最快速度按下扑克"  preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+       [alertView addAction:cancel];
+
+        NSLog(@"这是什么啊");
+        
+        [self presentViewController:alertView animated:YES completion:nil];
+}
 @end

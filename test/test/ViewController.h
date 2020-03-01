@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)showTip:(UIButton *)sender;
 
 @end
 
